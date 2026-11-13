@@ -6,6 +6,7 @@ build/
 
 # Local environment and runtime state
 .env
+.revolte/runtime/
 .env.*.local
 *.db
 *.sqlite
