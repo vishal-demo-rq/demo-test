@@ -1,0 +1,5 @@
+.git
+.revolte
+node_modules
+.env
+.env.*

@@ -1,0 +1,70 @@
+revolte:
+  version: '1'
+  project: demo-test
+  appName: Ecommerce-applicaiton
+  env:
+    preview:
+      services:
+        rid_1:
+          name: Ecommerce-applicaiton
+          type: WEB_SERVICE
+          entryPoint: server.mjs
+          properties:
+            port: 8080
+            health: /health
+            loadBalancerMode: shared
+            variables:
+              PORT: '8080'
+          specifications:
+            cpu: 2
+            memory: 2
+            storage: 30
+    qa:
+      branch: qa
+      services:
+        rid_1:
+          name: Ecommerce-applicaiton
+          type: WEB_SERVICE
+          entryPoint: server.mjs
+          properties:
+            port: 8080
+            health: /health
+            loadBalancerMode: shared
+          specifications:
+            cpu: 2
+            memory: 2
+            storage: 30
+    staging:
+      branch: staging
+      services:
+        rid_1:
+          name: Ecommerce-applicaiton
+          type: WEB_SERVICE
+          entryPoint: server.mjs
+          properties:
+            port: 8080
+            health: /health
+            loadBalancerMode: shared
+          specifications:
+            cpu: 2
+            memory: 2
+            storage: 30
+    production:
+      branch: main
+      services:
+        rid_1:
+          name: Ecommerce-applicaiton
+          type: WEB_SERVICE
+          entryPoint: server.mjs
+          properties:
+            port: 8080
+            health: /health
+            loadBalancerMode: shared
+          specifications:
+            cpu: 2
+            memory: 2
+            storage: 50
+            autoScaling:
+              replica:
+                min: 1
+                max: 3

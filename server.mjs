@@ -1,4 +1,5 @@
-import { createReadStream, statSync } from 'node:fs';
+import { createReadStream } from 'node:fs';
+import { stat } from 'node:fs/promises';
 import { createServer } from 'node:http';
 import { extname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -34,6 +35,12 @@ const server = createServer(async (request, response) => {
     return;
   }
 
+  if (pathname === '/health') {
+    response.writeHead(200, { 'Content-Type': 'text/plain; charset=utf-8' });
+    response.end(request.method === 'HEAD' ? undefined : 'ok');
+    return;
+  }
+
   const filename = files.get(pathname);
   if (!filename) {
     response.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
@@ -44,7 +51,7 @@ const server = createServer(async (request, response) => {
   const filePath = resolve(root, filename);
   let size;
   try {
-    size = statSync(filePath).size;
+    size = (await stat(filePath)).size;
   } catch (error) {
     console.error(`Unable to stat ${filename}:`, error);
     response.writeHead(500);
