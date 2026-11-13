@@ -12,6 +12,9 @@ const files = new Map([
   ['/sellers', 'sellers.html'],
   ['/sellers/', 'sellers.html'],
   ['/sellers.html', 'sellers.html'],
+  ['/products/soft-glow-table-lamp', 'product-lamp.html'],
+  ['/products/soft-glow-table-lamp/', 'product-lamp.html'],
+  ['/product-lamp.html', 'product-lamp.html'],
   ['/styles.css', 'styles.css'],
 ]);
 const contentTypes = new Map([
