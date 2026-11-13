@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A static marketplace concept for discovering thoughtful everyday goods from independent sellers."
+    />
+    <title>Northstar Market — Find your next favorite</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+      <div class="utility-bar">
+        <a class="brand" href="/" aria-label="Northstar Market home">
+          <span class="brand-mark" aria-hidden="true">N</span>
+          <span>northstar<span class="brand-market">market</span></span>
+        </a>
+        <span class="delivery-note">Good things, from good people.</span>
+        <a class="seller-link" href="/sellers">Sell with us <span aria-hidden="true">→</span></a>
+      </div>
+
+      <div class="search-row">
+        <span class="location-note"><span class="location-dot" aria-hidden="true"></span> A marketplace for curious finds</span>
+        <form class="search-box" role="search" aria-label="Preview search">
+          <label class="visually-hidden" for="market-search">Search the marketplace</label>
+          <input id="market-search" type="search" placeholder="What are you looking for?" disabled />
+          <button type="button" disabled aria-label="Search is not available in this preview">Search</button>
+        </form>
+        <span class="cart-note" aria-disabled="true">Your bag <span class="cart-count">0</span></span>
+      </div>
+
+      <nav class="category-nav" aria-label="Shop categories">
+        <a href="#all-finds">Explore all</a>
+        <a href="#home-goods">Home &amp; living</a>
+        <a href="#daily-rituals">Daily rituals</a>
+        <a href="#useful-things">Useful things</a>
+        <span class="preview-label">STATIC PREVIEW · Shopping is not enabled</span>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section class="welcome-strip" aria-label="Marketplace introduction">
+        <p>Thoughtful finds from independent makers and neighborhood shops.</p>
+        <a href="/sellers">Have a shop? Meet Northstar sellers <span aria-hidden="true">→</span></a>
+      </section>
+
+      <section class="catalog-intro" id="all-finds">
+        <div>
+          <p class="eyebrow">A little something for every day</p>
+          <h1>Find your next favorite.</h1>
+          <p class="intro-copy">Good design, useful details, and small-batch favorites—brought together in one place.</p>
+        </div>
+        <p class="results-note"><strong>4</strong> considered finds <span>·</span> from independent sellers</p>
+      </section>
+
+      <section class="aisle-section" id="home-goods" aria-labelledby="home-heading">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Make room for good things</p>
+            <h2 id="home-heading">At home, at ease</h2>
+          </div>
+          <a class="text-link" href="#daily-rituals">See the full collection <span aria-hidden="true">→</span></a>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="product-art art--linen" aria-hidden="true"><span class="art-object"></span><span class="art-shadow"></span></div>
+            <div class="product-details">
+              <p class="seller-name">Field &amp; Form · Portland, OR</p>
+              <h3>Woven cotton throw</h3>
+              <div class="product-meta"><span class="price">$68.00</span><span class="rating">★★★★★ <span>4.9</span></span></div>
+              <button class="add-button" type="button" disabled>Add to bag · Preview only</button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-art art--ceramic" aria-hidden="true"><span class="art-object"></span><span class="art-shadow"></span></div>
+            <div class="product-details">
+              <p class="seller-name">Sunday Kiln · Hudson, NY</p>
+              <h3>Hand-thrown breakfast bowl</h3>
+              <div class="product-meta"><span class="price">$34.00</span><span class="rating">★★★★★ <span>5.0</span></span></div>
+              <button class="add-button" type="button" disabled>Add to bag · Preview only</button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-art art--lamp" aria-hidden="true"><span class="art-object"></span><span class="art-shadow"></span></div>
+            <div class="product-details">
+              <p class="seller-name">Common House · Austin, TX</p>
+              <h3>Soft glow table lamp</h3>
+              <div class="product-meta"><span class="price">$92.00</span><span class="rating">★★★★☆ <span>4.8</span></span></div>
+              <button class="add-button" type="button" disabled>Add to bag · Preview only</button>
+            </div>
+          </article>
+
+          <article class="product-card" id="useful-things">
+            <div class="product-art art--bottle" aria-hidden="true"><span class="art-object"></span><span class="art-shadow"></span></div>
+            <div class="product-details">
+              <p class="seller-name">Juniper Supply · Seattle, WA</p>
+              <h3>Everyday steel bottle</h3>
+              <div class="product-meta"><span class="price">$28.00</span><span class="rating">★★★★★ <span>4.9</span></span></div>
+              <button class="add-button" type="button" disabled>Add to bag · Preview only</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="ritual-band" id="daily-rituals" aria-labelledby="ritual-heading">
+        <div class="ritual-copy">
+          <p class="eyebrow">The everyday, made lovely</p>
+          <h2 id="ritual-heading">Small rituals.<br />Better mornings.</h2>
+          <p>Thoughtful tools for the moments that make a day feel like your own.</p>
+          <a class="button-link" href="/sellers">Meet the makers</a>
+        </div>
+        <div class="ritual-art" aria-hidden="true"><span class="ritual-vessel"></span><span class="ritual-leaf leaf-one"></span><span class="ritual-leaf leaf-two"></span><span class="ritual-table"></span></div>
+      </section>
+
+      <section class="seller-callout">
+        <div>
+          <p class="eyebrow">Made something worth sharing?</p>
+          <h2>Your shop belongs here.</h2>
+          <p>Meet the independent sellers bringing Northstar Market to life.</p>
+        </div>
+        <a class="button-link button-link--dark" href="/sellers">Explore selling with us <span aria-hidden="true">→</span></a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand brand--footer" href="/">
+        <span class="brand-mark" aria-hidden="true">N</span>
+        <span>northstar<span class="brand-market">market</span></span>
+      </a>
+      <p>A concept marketplace for good things and the people who make them.</p>
+      <a href="/sellers">For sellers <span aria-hidden="true">→</span></a>
+    </footer>
+  </body>
+</html>
